@@ -1,0 +1,32 @@
+<div class="login-bg" fxLayout="row">
+    <mat-card fxFlex="25">
+        <div class="container">
+            <h1 class="title-color">Welcome</h1>
+            <p class="text-muted mb-0">Please log in to Analytics </p>
+
+            <form class="example-form">
+                <div fxLayout="row">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Username</mat-label>
+                        <input matInput type="text" placeholder="username" name="username" [(ngModel)]="username" autocomplete="sex">
+                    </mat-form-field>
+                </div>
+
+                <div fxLayout="row">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Password</mat-label>
+                        <input matInput type="text" placeholder="password" name="password" [(ngModel)]="password" autocomplete="sex">
+                    </mat-form-field>
+                </div>
+
+                <div fxLayout="row">
+                    <button mat-button mat-raised-button color="primary" (click)="logIN()">
+                        Login <mat-icon>done</mat-icon>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </mat-card>
+
+</div>

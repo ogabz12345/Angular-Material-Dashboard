@@ -1,0 +1,16 @@
+<app-header (isUserLoggedIn)="checkIfLoggedIn($event)" (toggleSideBarForMe)="sideBarToggle($event)"></app-header>
+
+<app-login (isUserLoggedIn)="checkIfLoggedIn($event)" *ngIf="view === 0"></app-login>
+
+
+<mat-drawer-container  *ngIf="view === 1">
+    <mat-drawer mode='side' [opened]="sideBarOpen">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+
+<app-footer></app-footer>
